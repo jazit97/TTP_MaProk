@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TTP_MaProk:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/TTP_MaProk_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TTP_MaProk" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.oracle.ojdbc:ojdbc10:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.ojdbc:ucp:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.ojdbc:oraclepki:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.ojdbc:osdt_cert:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.ojdbc:osdt_core:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.ojdbc:simplefan:19.3.0.0" />
+          <element id="library" level="project" name="Maven: com.oracle.ojdbc:ons:19.3.0.0" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.14" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.2.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.2.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.2.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="TTP_MaProk/web/Web" />
+    </root>
+  </artifact>
+</component>
