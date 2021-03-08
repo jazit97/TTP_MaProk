@@ -26,7 +26,7 @@ public class InstitutionListRequest extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        System.out.println("InstitutionslistRequest: doGet");
+        System.out.println("InstitutionslistRequest: doGet:Start");
         DatabaseManager manager = new DatabaseManager();
         LinkedList<String> instList = manager.getInstitutionList();
         PrintWriter out = new PrintWriter(response.getOutputStream());
@@ -38,7 +38,7 @@ public class InstitutionListRequest extends HttpServlet {
             e.printStackTrace();
         }
         out.close();
-        System.out.println("doGet:END");
+        System.out.println("InstitutionslistRequest: doGet:End");
 
     }
 }
