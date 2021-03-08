@@ -35,7 +35,7 @@ public class DatabaseManager {
         LinkedList<String> inst = new LinkedList<>();
         try{
             while(rs.next()){
-                inst.add(rs.getString(2));
+                inst.add(rs.getString(3));
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -62,17 +62,22 @@ public class DatabaseManager {
         if(specificSchema == null){
             specificSchema = schema;
         }
+        Connection con = connect(specificSchema);;
         ResultSet rs = null;
         try {
-            Connection con = connect(specificSchema);
             System.out.println("Query: " + statement);
             Statement query = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             query.execute(statement);
             rs = query.getResultSet();
-            con.close();
         }catch(Exception e){
             e.printStackTrace();
         }
+        try{
+            con.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         return rs;
     }
 
