@@ -29,6 +29,19 @@ public class DatabaseManager {
         }
         return address;
     }
+    public LinkedList<String> getInstitutionList(){
+        String statement = "SELECT * FROM inst_list";
+        ResultSet rs = query(statement,null);
+        LinkedList<String> inst = new LinkedList<>();
+        try{
+            while(rs.next()){
+                inst.add(rs.getString(2));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return inst;
+    }
 
     private Connection connect(String schema) {
         Connection con = null;
